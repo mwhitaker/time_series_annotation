@@ -1,0 +1,24 @@
+{
+  "name": "Analytics Buddy Charts",
+  "organization": "Analytics Buddy",
+  "description": "Cool visualizations",
+  "logoUrl": "https://raw.githubusercontent.com/mwhitaker/time_series_annotation/master/images/viz_icon.png",
+  "organizationUrl": "https://www.analyticsbuddy.com",
+  "supportUrl": "https://github.com/mwhitaker/time_series_annotation/issues",
+  "privacyPolicyUrl": "",
+  "termsOfServiceUrl": "",
+  "packageUrl": "https://github.com/mwhitaker/time_series_annotation",
+  "devMode": "DEVMODE_BOOL",
+  "components": [
+    {
+      "name": "Time Series Chart with Annotations",
+      "description": "Configurable time series chart with annotations and filtering",
+      "iconUrl": "https://raw.githubusercontent.com/mwhitaker/time_series_annotation/master/images/viz_icon.png",
+      "resource": {
+        "js": "gs://analytics_buddy_viz/timeseries/index.js",
+        "config": "gs://analytics_buddy_viz/timeseries/index.json",
+        "css": "gs://analytics_buddy_viz/timeseries/index.css"
+      }
+    }
+  ]
+}

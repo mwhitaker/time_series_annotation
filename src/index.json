@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "id": "dimensions",
+      "label": "Dimensions",
+      "elements": [
+        {
+          "id": "date",
+          "label": "Date",
+          "type": "DIMENSION",
+          "options": {
+            "min": 1,
+            "max": 1,
+            "supportedTypes": ["TIME"]
+          }
+        },
+        {
+          "id": "annotation",
+          "label": "Annotation",
+          "type": "DIMENSION",
+          "options": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        {
+          "id": "arbitraryMetric",
+          "label": "Metric",
+          "type": "METRIC",
+          "options": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    }
+  ],
+  "style": [
+    {
+      "id": "styleOptions",
+      "label": "Chart Line Options",
+      "elements": [
+        {
+          "id": "lineColor",
+          "label": "Line Color",
+          "type": "FILL_COLOR",
+          "defaultValue": "#9AA0A6"
+        },
+        {
+          "id": "lineWeight",
+          "label": "Line Weight",
+          "type": "LINE_WEIGHT",
+          "defaultValue": "2"
+        }
+      ]
+    },
+    {
+      "id": "annotOptions",
+      "label": "Annotation Options",
+      "elements": [
+        {
+          "id": "annotColor",
+          "label": "Annotation Color",
+          "type": "FILL_COLOR",
+          "defaultValue": "#9AA0A6"
+        },
+        {
+          "id": "annotRadius",
+          "label": "Annotation Radius Weight",
+          "type": "BORDER_RADIUS",
+          "defaultValue": "5"
+        },
+        {
+          "id": "annotFill",
+          "label": "Annotation Fill",
+          "type": "OPACITY",
+          "defaultValue": "1"
+        },
+        {
+          "id": "annotXoffset",
+          "label": "X Offset",
+          "type": "TEXTINPUT",
+          "defaultValue": "20"
+        },
+        {
+          "id": "annotYoffset",
+          "label": "Y Offset",
+          "type": "TEXTINPUT",
+          "defaultValue": "40"
+        }
+      ]
+    }
+  ],
+  "interactions": [
+    {
+      "id": "onClick",
+      "supportedActions": ["FILTER"]
+    }
+  ]
+}
