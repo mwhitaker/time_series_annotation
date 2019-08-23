@@ -391,6 +391,14 @@ export const message = {
       "value": '20',
       "defaultValue": '2'
     },
+    "annotXoffset": {
+      "value": '20',
+      "defaultValue": '2'
+    },
+    "annotYoffset": {
+      "value": '20',
+      "defaultValue": '2'
+    },
     "annotFill": {
       "value": 'false',
       "defaultValue": 'false'

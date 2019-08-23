@@ -19,7 +19,7 @@ const moment = require('moment');
 function sortByDateAscending(a, b) {
   return a.date - b.date;
 }
-export const LOCAL = false;
+export const LOCAL = true;
 
 function click(d, message) {
   // console.log(d);
@@ -71,6 +71,8 @@ const drawViz = data => {
   const width = dscc.getWidth() - margin.right - margin.left;
   const svgHeight = height - margin.top - margin.bottom;
   const svgWidth = width - margin.left - margin.right;
+
+  const header = data.fields.arbitraryMetric.map(d => d.name);
 
   if (
     svgHeight < 0 ||
@@ -132,8 +134,10 @@ const drawViz = data => {
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
-    .attr("transform",
-      "translate(" + margin.left + "," + margin.top + ")");
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  svg.append('text')
+    .text(header[0])
+    .attr("transform", "translate(" + 10 + "," + 0 + ")");
 
   var vizData = data.tables.DEFAULT.map(d => {
     return {
@@ -164,11 +168,11 @@ const drawViz = data => {
   var labelData = vizData.filter(x => x.annotation).map(function (l) {
     l.note = Object.assign({}, l.note, {
       title: l.annotation,
-      label: "" + l.date.format('YYYY-M-D')
+      label: "" + l.date.format('YYYY-MM-DD')
     });
     l.subject = { radius: style.annotRadius };
-    l.dx = style.annotXoffset;
-    l.dy = style.annotYoffset;
+    l.dx = parseInt(style.annotXoffset);
+    l.dy = parseInt(style.annotYoffset);
     l.color = style.annotColor;
 
     l.data = { date: l.dateStr, close: l.close }
