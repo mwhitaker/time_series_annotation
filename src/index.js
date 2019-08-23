@@ -19,7 +19,7 @@ const moment = require('moment');
 function sortByDateAscending(a, b) {
   return a.date - b.date;
 }
-export const LOCAL = true;
+export const LOCAL = false;
 
 function click(d, message) {
   // console.log(d);
@@ -135,8 +135,9 @@ const drawViz = data => {
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-  svg.append('text')
+  svg.append("text")
     .text(header[0])
+    .attr("font-size", "smaller")
     .attr("transform", "translate(" + 10 + "," + 0 + ")");
 
   var vizData = data.tables.DEFAULT.map(d => {
