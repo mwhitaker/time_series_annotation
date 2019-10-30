@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@google/dscc-scripts@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@google/dscc-scripts/-/dscc-scripts-1.0.6.tgz#c93ebb4d1138c054f468ee2c875d1db7ecbb85a1"
-  integrity sha512-mXkAP7GBlKWitX1Lgz+QM6j05Y8qtRE4eoa1IubrjXqJonuUkhrD8T9SwFZgs7d89OYr2VE7MGSY08DkH2k/xQ==
+"@google/dscc-scripts@^1.0.9":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@google/dscc-scripts/-/dscc-scripts-1.0.10.tgz#2f670e90c0f442496d41dc29866367e427f9e16b"
+  integrity sha512-fSza1/QkC/MELwQMVL+NvzBfnRUNPyHGGFHa/Yj2AxbOFQ7Raig/H9T/ZaDi64A3mJxxKi6pbPVEsQpOIUQ0dg==
   dependencies:
     argparse "^1.0.10"
     bluebird "^3.5.3"
@@ -24,7 +24,7 @@
     webpack-merge "^4.2.1"
     webpack-plugin-replace "^1.1.1"
 
-"@google/dscc@^0.3.8":
+"@google/dscc@^0.3.12":
   version "0.3.12"
   resolved "https://registry.yarnpkg.com/@google/dscc/-/dscc-0.3.12.tgz#050fed7032986b4d1b9392aa2b2a3384c2c78a91"
   integrity sha512-inCTp3N9F9Os3JqVT+trZ4WVxpF6/+jFpjhS6CeX7DdIYKfSx8dp2vnZqjIICiUL9OVJg/iQU89EogfFVjYwKw==
@@ -1188,7 +1188,12 @@ d3-dispatch@1:
   resolved "https://registry.yarnpkg.com/d3-dispatch/-/d3-dispatch-1.0.5.tgz#e25c10a186517cd6c82dd19ea018f07e01e39015"
   integrity sha512-vwKx+lAqB1UuCeklr6Jh1bvC4SZgbSqbkGBLClItFBIYH4vqDJCA7qfoy14lXmJdnBOdxndAMxjCbImJYW7e6g==
 
-d3-drag@1:
+d3-dispatch@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/d3-dispatch/-/d3-dispatch-1.0.2.tgz#5b511e79a46a1f89492841c0a8f656687d5daa0a"
+  integrity sha1-W1EeeaRqH4lJKEHAqPZWaH1dqgo=
+
+d3-drag@1, d3-drag@1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/d3-drag/-/d3-drag-1.2.3.tgz#46e206ad863ec465d88c588098a1df444cd33c64"
   integrity sha512-8S3HWCAg+ilzjJsNtWW1Mutl74Nmzhb9yU6igspilaJzeZVFktmY6oO9xOh5TDk+BM2KrNFjttZNoJJmDnkjkg==
@@ -1291,7 +1296,7 @@ d3-scale@2:
     d3-time "1"
     d3-time-format "2"
 
-d3-selection@1, d3-selection@^1.1.0:
+d3-selection@1, d3-selection@1.4.0, d3-selection@^1.1.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/d3-selection/-/d3-selection-1.4.0.tgz#ab9ac1e664cf967ebf1b479cc07e28ce9908c474"
   integrity sha512-EYVwBxQGEjLCKF2pJ4+yrErskDnz5v403qvAid96cNdCMr8rmCYfY5RGzWz24mdIbxmDf6/4EAH+K9xperD5jg==
@@ -1302,6 +1307,24 @@ d3-shape@1:
   integrity sha512-VKazVR3phgD+MUCldapHD7P9kcrvPcexeX/PkMJmkUov4JM8IxsSg1DvbYoYich9AtdTsa5nNk2++ImPiDiSxg==
   dependencies:
     d3-path "1"
+
+d3-shape@1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/d3-shape/-/d3-shape-1.0.4.tgz#145ee100ccbec42f8e3f1996cd05c786f79fe1c6"
+  integrity sha1-FF7hAMy+xC+OPxmWzQXHhvef4cY=
+  dependencies:
+    d3-path "1"
+
+d3-svg-annotation@^2.5.0:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/d3-svg-annotation/-/d3-svg-annotation-2.5.1.tgz#4771d4a2f0c7911442505d763795fecc725d8ce0"
+  integrity sha512-PXW39bunDsn2K6uiCUlZ919fnC29o8oIDzNJtKvz6xOMeNv53LyNkucn40YjLherNCrlx5JGsyEtw/DZcjAa4Q==
+  dependencies:
+    d3-dispatch "1.0.2"
+    d3-drag "1.2.3"
+    d3-selection "1.4.0"
+    d3-shape "1.0.4"
+    d3-transition "1.0.3"
 
 d3-time-format@2:
   version "2.1.3"
@@ -1330,6 +1353,18 @@ d3-transition@1, d3-transition@^1.1.3:
     d3-ease "1"
     d3-interpolate "1"
     d3-selection "^1.1.0"
+    d3-timer "1"
+
+d3-transition@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/d3-transition/-/d3-transition-1.0.3.tgz#91dc986bddb30973639320a85db72ce4ab1a27bb"
+  integrity sha1-kdyYa92zCXNjkyCoXbcs5KsaJ7s=
+  dependencies:
+    d3-color "1"
+    d3-dispatch "1"
+    d3-ease "1"
+    d3-interpolate "1"
+    d3-selection "1"
     d3-timer "1"
 
 d3-voronoi@1:
@@ -2868,9 +2903,9 @@ lodash.tail@^4.1.1:
   integrity sha1-0jM6NtnncXyK0vfKyv7HwytERmQ=
 
 lodash@^4.0.0, lodash@^4.17.11, lodash@^4.17.5, lodash@~4.17.10:
-  version "4.17.11"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
-  integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
+  version "4.17.15"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
+  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
 
 loglevel@^1.6.2:
   version "1.6.2"
